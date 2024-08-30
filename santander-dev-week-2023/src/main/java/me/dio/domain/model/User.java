@@ -1,4 +1,4 @@
-package me.dio.web.santander_dev_week_2023.domain.model;
+package me.dio.domain.model;
 
 import jakarta.persistence.*;
 
@@ -25,4 +25,28 @@ public class User {
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<News> news;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+    public List<Feature> getFeatures() {
+        return features;
+    }
+
+    public List<News> getNews() {
+        return news;
+    }
 }

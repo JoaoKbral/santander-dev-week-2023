@@ -1,4 +1,4 @@
-package me.dio.web.santander_dev_week_2023.domain.model;
+package me.dio.domain.model;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,4 +12,16 @@ public abstract class BaseItem {
     private Long id;
     private String icon;
     private String description;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }
